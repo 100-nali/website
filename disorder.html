@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Disorder tracking — Sonali Goel</title>
+  <meta name="description" content="Real-time inference of time-evolving charge disorder in quantum devices — live tracking demo.">
+  <meta name="theme-color" content="#06070c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2306070c'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%233ee9ff' text-anchor='middle'%3E%CF%88%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Detail page for the disorder project — reached by clicking the entry title
+     on index.html. Same editing rules as everywhere: plain-text editors only. -->
+
+<a class="post-back" href="index.html">&larr; sonali goel</a>
+
+<section id="disorder">
+  <h2><span class="ket">|</span>disorder<span class="ket">&#10217;</span></h2>
+  <p class="empty">real-time inference of time-evolving disorder in quantum devices.</p>
+
+  <figure class="demo">
+    <a href="assets/dt_tracking_4panel.gif">
+      <img src="assets/dt_tracking_4panel.gif"
+           alt="Four-panel animation: the observed charge-stability diagram, the true hidden disorder, the model's inferred disorder, and the charge-stability diagram re-simulated from that inference, all tracking as the disorder drifts over time">
+    </a>
+    <figcaption>left to right: observed charge-stability diagram · true (hidden) disorder ·
+    the model's inferred disorder, best of 64 samples · the diagram re-simulated from that
+    inference (the r value updates live)</figcaption>
+  </figure>
+
+  <!-- TODO: description drafted by Claude from the animation + project blurb —
+       correct anything that misstates the setup. -->
+<p>
+  Spin qubits and the gates that control them operate in an environment shaped by
+  charge disorder: stray trapped charges in the material that distort device
+  behavior and drift over time. The disorder itself cannot be measured directly.
+  What we observe instead is the device's <em>charge stability diagram (CSD)</em>, whose
+  structure is determined by the underlying disorder.
+</p>
+
+<p>
+  In the animation, the true disorder (second panel) evolves continuously while
+  the model only sees the streaming charge stability diagram (first panel). From
+  these measurements, it infers the hidden disorder landscape, with the third
+  panel showing its best prediction from 64 sampled candidates. The final panel
+  provides the validation: a digital twin re-simulates the charge stability
+  diagram using the inferred disorder, and the correlation with the real
+  measurement updates live as both evolve. Real-time inference of hidden disorder
+  is a step toward quantum devices that can continuously monitor and recalibrate
+  themselves as operating conditions change.
+</p>
+</section>
+
+<footer>
+  <p>oxford, uk ·
+  <a href="mailto:sonali.goel@wolfson.ox.ac.uk">sonali.goel@wolfson.ox.ac.uk</a> ·
+  <span class="psi">&psi;</span><br>
+  <span class="fine">last updated july 2026</span></p>
+</footer>
+
+</body>
+</html>

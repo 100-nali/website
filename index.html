@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sonali Goel</title>
+  <meta name="description" content="Sonali Goel — PhD student at the University of Oxford. AI for quantum devices and safe continual adaptation of LLM agents.">
+  <meta property="og:title" content="Sonali Goel">
+  <meta property="og:description" content="PhD student at Oxford — AI for quantum devices and safe continual adaptation of LLM agents.">
+  <meta name="theme-color" content="#06070c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2306070c'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%233ee9ff' text-anchor='middle'%3E%CF%88%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     EDITING GUIDE  (this comment never shows on the page; delete anytime)
+
+     · IMPORTANT — edit this file as PLAIN TEXT ONLY. macOS TextEdit
+       opens .html files in rich-text mode and silently destroys the
+       design when you save. Before using TextEdit: Preferences →
+       Open and Save → tick "Display HTML files as HTML code instead
+       of formatted text". Safest of all:
+           cd ~/Desktop/sonali-site && claude
+       and describe your changes in plain English.
+     · The site is three pages: index.html (intro + photo, research),
+       life.html (music, art, anything else), and disorder.html (the
+       tracking demo, opened by clicking the disorder entry's title).
+       Same rules in all. Edit the text BETWEEN tags; leave the tags
+       (<p>, <h3>, <a href="...">) themselves alone.
+     · Type real characters directly: — · × τ ψ ⟩ all work. The only
+       two to avoid raw are & (write &amp;) and < (write &lt;).
+     · Each research item is one <article class="entry"> ... </article>
+       block. Copy a whole block to add one, delete a block to remove,
+       drag blocks around to reorder — the 01/02/03 numbers renumber
+       themselves automatically.
+     · Your photo: assets/me.jpg, shown beside the intro paragraph
+       below (replace the file to change it; delete it → text-only).
+     · Art photos: drop files named art-1.jpg … art-8.jpg into assets/
+       — the gallery on life.html picks them up automatically (clay
+       first). Guitar video tiles: posters at assets/music-N-poster.jpg
+       that link out to the Instagram posts (Music entry in life.html).
+     · Typewriter phrases live in quantum.js (the `phrases` list).
+     · Preview: double-click index.html, or run:
+           python3 -m http.server 4173 -d ~/Desktop/sonali-site
+     · New writing post: copy writing/post-template.html, rename it,
+       write, then add an entry in the |writing⟩ section below.
+     · Confidentiality rule: unpublished work stays at question-level —
+       no mechanisms, benchmark lists, or venues until there's a public
+       preprint to link (see README.md).
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<header class="hero">
+  <div class="hero-text">
+    <h1>Sonali Goel</h1>
+    <p class="role">dphil · engineering science · university of oxford</p>
+    <p class="tagline"><span class="prompt">&gt;</span> <span id="type">AI for quantum devices</span><span class="cursor">&#9612;</span></p>
+    <nav class="links">
+      <a href="life.html">[other fun stuff]</a>
+      <a href="mailto:sonali.goel@wolfson.ox.ac.uk">[email]</a>
+      <a href="https://scholar.google.com/citations?hl=en&user=I05lC50AAAAJ">[scholar]</a>
+      <a href="https://www.linkedin.com/in/sonali-goel-a2a984173/">[linkedin]</a>
+      <!-- TODO: uncomment and fill in your links, delete the ones you don't use
+      <a href="https://github.com/100-nali">[github]</a>
+      <a href="https://www.instagram.com/YOUR-HANDLE">[instagram]</a>
+      <a href="https://x.com/YOUR-HANDLE">[x]</a>
+      -->
+    </nav>
+  </div>
+  <canvas id="bloch" width="300" height="300" aria-hidden="true"></canvas>
+</header>
+
+<section class="intro">
+  <h2><span class="ket">|</span>about me<span class="ket">&#10217;</span></h2>
+  <div class="about-flex">
+    <!-- <p>I'm a PhD student at Oxford (Wolfson College), supervised by
+    <a href="https://eng.ox.ac.uk/people/natalia-ares/">Natalia Ares</a> and funded by the
+    Laboratory for AI Security Research (LASR). I work on two questions that keep
+    converging: <em>when does structure actually help a learned model</em> — symplectic
+    priors for quantum dynamics, adaptive world models — and <em>how can deployed LLM
+    agents keep adapting without breaking what they already know</em>. I hold both to the
+    same standard: parameter-matched baselines, fair controls, and retracting the headline
+    when the control wins.</p> -->
+    <p>
+  I'm a PhD student at Oxford (Wolfson College), supervised by
+  <a href="https://eng.ox.ac.uk/people/natalia-ares/">Natalia Ares</a>
+  and funded by the Laboratory for AI Security Research (LASR).
+  My research explores the <em>intersection of AI and quantum technologies </em>,
+  spanning both the development of new machine learning methods and their
+  application to challenging scientific problems. I am particularly interested
+  in <em>continual learning, reinforcement learning, world models, and
+  physics-informed machine learning for complex dynamical systems </em>.
+
+  Before my PhD, I completed an integrated MEng in Engineering Science at the
+  University of Oxford (St Hugh's College) , where I studied machine learning,
+  control, robotics, computer vision, dynamical systems, and applied mathematics.
+  Outside of research, I serve as Events Officer for the <em>Oxford Engineering
+  Society</em>, previously represented undergraduates on the <em>Women in Engineering
+  Network</em>, and was Vice President of the <em>St Hugh's College Music Society</em>.
+</p>
+    <img class="portrait" src="assets/me.jpg" alt="Sonali Goel"
+         onerror="this.closest('.about-flex').style.gridTemplateColumns='1fr'; this.remove()">
+  </div>
+</section>
+
+<section id="research">
+  <h2><span class="ket">|</span>research<span class="ket">&#10217;</span></h2>
+
+  <article class="entry">
+    <h3>RIZZ: continual adaptation for black-box LLM agents</h3>
+    <p class="meta"><a href="https://arxiv.org/abs/2606.20638">arXiv:2606.20638</a> · DPhil work, Oxford / LASR</p>
+    <p>Continual adaptation for black-box LLM agents with reduced catastrophic forgetting.
+  RIZZ partitions long-term memory and uses verifier-guided retrieval to reduce
+  interference between new and existing knowledge, achieving state-of-the-art
+  aggregate performance across five continual learning and agent benchmarks at
+  substantially lower computational cost than existing memory systems.</p>
+  </article>
+
+  <article class="entry">
+    <h3>Structured networks for predicting quantum dynamics</h3>
+    <p class="meta">working paper · 2026 </p>
+    <p> Physics-informed neural networks for forecasting driven, dissipative, and
+  chaotic quantum systems. The project investigates when structured inductive
+  biases improve generalization over purely data-driven models, and when they do
+  not.</p>
+  </article>
+
+  <article class="entry">
+    <h3>World models and JEPA</h3>
+    <p class="meta">working paper · 2026 </p>
+    <p> Predictive world models that continually adapt to changing environments while
+  retaining previously learned dynamics. The project studies transferable latent
+  representations and how world models can discover rules that generalize across
+  related environments.</p>
+  </article>
+
+  <article class="entry">
+    <h3>Reinforcement learning for automated multi-qubit tuning</h3>
+    <p class="meta">visiting researcher · Tarucha Laboratory, RIKEN · 2026&ndash;present</p>
+    <p> RL agents that navigate quantum-dot voltage landscapes autonomously, replacing
+    expert manual calibration so that tuning scales to multiple spin qubits.</p>
+  </article>
+
+  <article class="entry">
+    <h3><a href="disorder.html" data-link="demo">Real-time inference of time-evolving disorder in quantum devices</a></h3>
+    <p class="meta">working paper · 2025&ndash;present</p>
+    <p>Machine learning methods for inferring latent, time-evolving charge disorder
+  in semiconductor quantum devices. The project combines accelerated
+  simulations, distribution transformers, and self-supervised learning to
+  recover hidden disorder landscapes from streaming measurements in real time.</p>
+  </article>
+
+  <article class="entry">
+    <h3><a href="https://github.com/100-nali/Two-Qubit-Transmon-Auto-Tuning" target="_blank" rel="noopener" data-link="github">Superconducting-qubit simulation &amp; Bayesian gate optimization</a></h3>
+    <p class="meta">MEng thesis, Oxford · first class honors · 2023&ndash;24</p>
+    <p>A Python simulator for multi-qubit systems under flux and drive-pulse control, with
+    closed-loop Bayesian optimization of pulses for single- and two-qubit gate fidelity.</p>
+  </article>
+<!-- 
+  <p class="empty">unpublished work is deliberately light on detail here —
+  manuscripts, methods, and results are available on request:
+  <a href="mailto:sonali.goel@wolfson.ox.ac.uk">email me</a>.</p> -->
+</section>
+
+<!-- WRITING SECTION — hidden for now. To restore it, delete this line and the
+     comment markers at the start and end of the block.
+<section id="writing">
+  <h2><span class="ket">|</span>writing<span class="ket">&#10217;</span></h2>
+  <p class="empty">research notes in progress — negative results worth keeping, and the
+  controls that killed otherwise-good designs.</p>
+  To add entries when you publish notes, use this format:
+  <article class="entry">
+    <h3><a href="writing/your-note.html">Title of the note</a></h3>
+    <p class="meta">july 2026</p>
+    <p>One-sentence description of what the note shows.</p>
+  </article>
+  A ready-made post layout is in writing/post-template.html — copy it, rename it, write.
+</section>
+-->
+
+<footer>
+  <p>oxford, uk ·
+  <a href="mailto:sonali.goel@wolfson.ox.ac.uk">sonali.goel@wolfson.ox.ac.uk</a> ·
+  <span class="psi">&psi;</span><br>
+  <span class="fine">last updated july 2026</span></p>
+</footer>
+
+<script src="quantum.js"></script>
+</body>
+</html>
