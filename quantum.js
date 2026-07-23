@@ -14,8 +14,9 @@
   var phrases = [
     'AI for quantum devices',
     'safe continual adaptation of LLM agents',
-    'world models that know when to learn a new rule',
-    'fair baselines · honest headlines'
+    'physics informed machine learning',
+    'reinforcement learning',
+    'world models and JEPA'
   ];
 
   if (typeEl && !reduced) {
