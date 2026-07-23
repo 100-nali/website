@@ -12,11 +12,11 @@
 
   var typeEl = document.getElementById('type');
   var phrases = [
-    'AI for quantum devices',
-    'safe continual adaptation of LLM agents',
-    'physics informed machine learning',
+    'AI x quantum technologies',
+    'continual learning for LLM agents',
     'reinforcement learning',
-    'world models and JEPA'
+    'world models',
+    'physics-informed machine learning'
   ];
 
   if (typeEl && !reduced) {
